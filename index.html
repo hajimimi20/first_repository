@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>資料科學家 — 履歷表</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--accent:#c7b27a;--muted:#666}
+    *{box-sizing:border-box}
+    body{font-family:'Noto Sans TC',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;
+    line-height:1.5;color:#111;margin:0;background:#f2f4f7}
+    .container{max-width:900px;margin:32px auto;background:#f2f4f7;
+        border-radius:10px;box-shadow:0 6px 24px rgba(16,24,40,.08);overflow:hidden}
+    header{display:flex;gap:20px;padding:28px;border-bottom:1px solid #eef2f7}
+    .avatar{flex:0 0 110px;height:110px;border-radius:12px;
+        background:linear-gradient(135deg,var(--accent),#9e8f6f);display:flex;
+        align-items:center;justify-content:center;color:#eef2f7;font-weight:700;
+        font-size:28px}
+    .intro{flex:1}
+    h1{margin:0;font-size:26px}
+    .title{color:var(--accent);font-weight:700;margin-top:6px}
+    .meta{margin-top:10px;color:var(--muted);font-size:14px}
+    main{padding:28px;display:grid;grid-template-columns:1fr 320px;gap:28px}
+    section{margin-bottom:18px}
+    .section-title{font-weight:700;color:#0f172a;margin-bottom:8px}
+    .summary{background:#f8fafc;padding:12px;border-radius:8px;color:#0f172a}
+    ul.skills{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
+    ul.skills li{background:#eef6ff;color:var(--accent);padding:8px 10px;
+        border-radius:8px;font-weight:600;font-size:13px}
+    .skill-list{display:flex;flex-direction:column;gap:6px}
+    .experience{border-left:3px solid #eef2f7;padding-left:14px}
+    .job{margin-bottom:14px}
+    .job .role{font-weight:700}
+    .job .period{color:var(--muted);font-size:13px}
+    .project{background:#fff6ed;padding:10px;border-left:4px solid #e4b0d0;
+        border-radius:6px}
+    .contact{font-size:14px;display:flex;flex-direction:column;gap:6px}
+    footer{padding:18px;border-top:1px solid #eef2f7;text-align:center;
+        color:var(--muted);font-size:13px}
+    @media (max-width:920px){main{grid-template-columns:1fr;}}
+    @media print{body{background:#fff} .container{box-shadow:none;border-radius:0} header, 
+    footer{display:none}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar">mi</div>
+      <div class="intro">
+        <h1>Mimi</h1>
+        <div class="title">資料科學家 / 哈基咪工程師</div>
+        <div class="meta">以數據驅動產品決策與模型部署；熟悉端到端 ML 流程、
+            實驗設計與可解釋性分析。</div>
+      </div>
+    </header>
+
+    <main>
+      <div>
+        <section>
+          <div class="section-title">個人簡介</div>
+          <div class="summary">擁有 5 年哈基咪實務經驗，專長於特徵工程、
+            時間序列預測、推薦系統與自然語言處理。熱衷將複雜模型落地成可解釋、可維運的產品服務；
+            曾帶領跨功能團隊將模型導入生產，提升關鍵指標 15% 以上。</div>
+        </section>
+
+        <section>
+          <div class="section-title">核心技能</div>
+          <ul class="skills">
+            <li>Python (pandas, scikit-learn, PyTorch)</li>
+            <li>資料工程: SQL, Spark</li>
+            <li>機器學習: Boosting, 深度學習, 時序分析</li>
+            <li>NLP: transformers, text-processing</li>
+            <li>模型部署: Docker, FastAPI, CI/CD</li>
+            <li>視覺化: Tableau, matplotlib, seaborn</li>
+          </ul>
+        </section>
+
+        <section>
+          <div class="section-title">工作經驗</div>
+          <div class="experience">
+            <div class="job">
+              <div class="role">資深資料科學家 — ABC 科技 (2021 - 現在)</div>
+              <div class="period">負責範圍：使用者行為分析、推薦引擎、A/B 測試設計</div>
+              <ul>
+                <li>主導推薦系統改版專案，透過混合協同過濾與內容特徵，使 CTR 提升 18%。</li>
+                <li>建立離線特徵平台與 feature store，將模型訓練時間縮短 40%。</li>
+                <li>設計實驗框架並推動 A/B 測試常態化，提升決策速度與可追溯性。</li>
+              </ul>
+            </div>
+
+            <div class="job">
+              <div class="role">資料科學家 — XYZ 電商 (2018 - 2021)</div>
+              <div class="period">負責範圍：銷售預測、客戶分群、異常偵測</div>
+              <ul>
+                <li>導入時間序列混合模型，提升銷售預測準確度 12%。</li>
+                <li>建立自動化資料清理與監控 pipeline，降低資料問題回溯時間。</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-title">專案實績</div>
+          <div class="project">
+            <strong>智慧客服意圖分類</strong>
+            <div>使用 BERT 微調模型整合業務規則，將分類準確率從 82% 提升至 92%，
+                並將回應時間縮短 30%。</div>
+          </div>
+          <div style="height:8px"></div>
+          <div class="project">
+            <strong>動態價格建議系統</strong>
+            <div>以回歸與強化學習混合方法，為高價值商品提供價格建議，平均毛利提升 6%。</div>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-title">教育背景</div>
+          <div>
+            <strong>國立大學 資訊工程 / 碩士</strong> — 主修機器學習與資料探勘 (2016 - 2018)
+          </div>
+        </section>
+
+      </div>
+
+      <aside>
+        <section>
+          <div class="section-title">聯絡資訊</div>
+          <div class="contact">
+            <div>電子郵件：hajimi@example.com</div>
+            <div>電話：+886 912-345-678</div>
+            <div>地點：台北市 · 可遠端工作</div>
+            <div>GitHub：github.com/hajimimi</div>
+            <div>LinkedIn：linkedin.com/in/hajimimi</div>
+            <div>Kaggle：kaggle.com/hajimimi</div>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-title">證照與獎項</div>
+          <ul style="margin:0;padding-left:18px;color:var(--muted)">
+            <li>Google Data Analytics Certificate</li>
+            <li>公司內部年度創新獎 (2022)</li>
+          </ul>
+        </section>
+
+        <section>
+          <div class="section-title">工具與技術堆疊</div>
+          <div class="skill-list">
+            <div>Python, R, SQL</div>
+            <div>PyTorch, scikit-learn, XGBoost</div>
+            <div>Airflow, Spark, Docker</div>
+            <div>FastAPI, Flask, REST</div>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-title">論文 / 發表</div>
+          <div style="color:var(--muted);font-size:14px">"A Practical Approach to 
+            Time-Series Forecasting" — 研討會發表 (2020)</div>
+        </section>
+
+      </aside>
+    </main>
+
+    <footer>可依需求自訂內容 — 聯絡我以獲取可編輯範本</footer>
+  </div>
+</body>
+</html>
